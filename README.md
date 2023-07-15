@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The ScribbleSolver is a machine learning model that combines Convolutional Neural Networks (CNNs) and Optical Character Recognition (OCR) technology to recognize and interpret handwritten mathematical equations. This project has resulted in a model that accurately identifies digits and mathematical symbols from handwritten input, effectively translating these into solvable equations.
+The ScribbleSolver is a web based machine learning model that combines Convolutional Neural Networks (CNNs) and Optical Character Recognition (OCR) technology to recognize and interpret handwritten mathematical equations. This project has resulted in a model that accurately identifies digits and mathematical symbols from handwritten input, effectively translating these into solvable equations.
 
 Our model is highly accurate with a measured accuracy of 98.27%, and a minimized loss function of 0.656%. This showcases the successful application of machine learning techniques to solve complex, real-world problems.
 
