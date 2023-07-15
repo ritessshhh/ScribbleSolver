@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scribble-Solver</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style2.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style3.css')}}">
+</head>
+
+<body>
+    <div class="main">
+        <div class="mytabs">
+            <h2 class="heading">SCRIBBLE-SOLVER</h2>
+            <h5 class="subheading">By Amir and Ritesh</h5>
+
+            <input type="radio" id="tabfree" name="mytabs" checked="checked">
+            <label for="tabfree">Scribble</label>
+            <div class="tab first">
+                <h2>Scribble your equation</h2>
+                <div class="container">
+                    <section class="tools-board">
+                        <div class="row">
+                            <label class="title">Options</label>
+                            <ul class="options">
+                                <li class="option active tool" id="brush">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
+                                        class="bi bi-brush" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.067 6.067 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.118 8.118 0 0 1-3.078.132 3.659 3.659 0 0 1-.562-.135 1.382 1.382 0 0 1-.466-.247.714.714 0 0 1-.204-.288.622.622 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896.126.007.243.025.348.048.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04zM4.705 11.912a1.23 1.23 0 0 0-.419-.1c-.246-.013-.573.05-.879.479-.197.275-.355.532-.5.777l-.105.177c-.106.181-.213.362-.32.528a3.39 3.39 0 0 1-.76.861c.69.112 1.736.111 2.657-.12.559-.139.843-.569.993-1.06a3.122 3.122 0 0 0 .126-.75l-.793-.792zm1.44.026c.12-.04.277-.1.458-.183a5.068 5.068 0 0 0 1.535-1.1c1.9-1.996 4.412-5.57 6.052-8.631-2.59 1.927-5.566 4.66-7.302 6.792-.442.543-.795 1.243-1.042 1.826-.121.288-.214.54-.275.72v.001l.575.575zm-4.973 3.04.007-.005a.031.031 0 0 1-.007.004zm3.582-3.043.002.001h-.002z" />
+                                    </svg>
+                                    <span>Brush</span>
+                                </li>
+                                <li class="option tool" id="eraser">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-eraser" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414l-3.879-3.879zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z" />
+                                    </svg>
+                                    <span>Eraser</span>
+                                </li>
+                                <li class="option">
+                                    <input type="range" id="size-slider" min="7" max="30" value="7" class="form-range">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row colors">
+                            <label class="title" id="colors">Colors</label>
+                            <ul class="options">
+                                <li class="option"></li>
+                                <li class="option selected"></li>
+                                <li class="option"></li>
+                                <li class="option"></li>
+                                <li class="option">
+                                    <input type="color" id="color-picker" value="#4A98F7">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row buttons">
+                            <button class="clear-canvas">Clear Canvas</button>
+                            <button class="save-img">Solve Equation</button>
+                        </div>
+                    </section>
+                    <section class="drawing-board">
+                        <canvas id="myCanvas" height="462px"></canvas>
+                    </section>
+                </div>
+            </div>
+
+            <input type="radio" id="tabsilver" name="mytabs">
+            <label for="tabsilver">Enter</label>
+            <div class="tab two">
+                <h2>Enter your equation</h2>
+                <div class="alert alert-warning" role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor"
+                        class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                    Warning: If equation is quadratic then it should in ax^2+bx+c format.
+                </div>
+                <p>Please enter your equation below.
+                    Make sure to format it properly for the system to understand.
+                    If your equation is quadratic, ensure it's in the format ax^2 + bx + c = 0, where 'a', 'b', and 'c' are the coefficients of your equation. Also, the equation must be for x and no other variable.
+                    The system can also handle more complex equations like polynomial, as long as they're properly formatted and don't forget to add "=0" or "=anything" at the end.
+                </p>
+                <form action="/solve_equation" method="post">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Equation</span>
+                        <input type="text" name="equation" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-lg">
+                    </div>
+                    <button type="submit" class="btn btn-dark mt-3">Solve Equation</button>
+                </form>
+            </div>
+
+            <input type="radio" id="tabgold" name="mytabs">
+            <label for="tabgold">How to use?</label>
+            <div class="tab three">
+                <h2>How to use Scribble-Solver?</h2>
+                <p>
+                    The Scribble-Solver is designed to recognize and solve mathematical equations based on input images or direct input.
+                    These images should clearly represent handwritten or typed equations. The system can also handle more complex equations like polynomial, as long as they're properly formatted.
+                    Here's a basic guide on how to use this tool: <br>
+                    <br>
+                    Don't worry, even though this project was hard to build, it's easy to use. 😬
+                    <br>
+                    <div class="alignment">
+                    Scribble:<br>
+                    1. Scribble any one variable equation on the drawing board.<br>
+                    2. Note: The model is trained only on "x", so make sure to use "x" only. It can be trained on more variables but to improve efficiency and simplicity we used x.<br>
+                    3. Make sure there is space between each number so that it recognises easily.<br>
+                    4. Equations should be in the format of "ax²+bx+c=0". Make sure to include "=0" or "=anything" at the end. <br>
+                    5. Press the solve equation button and wait for few seconds for the roots.<br>
+                    <br>
+                    Enter: <br>
+                    1. Enter the equation in the input field.<br>
+                    2. Equations should be in the format of "ax^2 + bx + c = 0". Make sure to include "=0" or "=anything" at the end. <br>
+                    3. Press the solve equation button and wait for few seconds for the roots.<br>
+                    </div>
+                </p>
+            </div>
+
+        </div>
+        {{ alert|safe }}
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <script src="{{ url_for('static',filename='script/script.js')}}"></script>
+</body>
+
+</html>

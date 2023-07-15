@@ -1,0 +1,243 @@
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+/* Main styles */
+body {
+  margin-top: 13.5rem;
+  color: rgb(0, 0, 0);
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 0.92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+  min-width: 1028px;
+}
+
+.mytabs label {
+  padding-right: 3px;
+}
+
+.mytabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 25px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+.mytabs input[type="radio"] {
+  display: none;
+}
+
+.mytabs label {
+  padding: 15px;
+  padding-left: 35px;
+  padding-right: 35px;
+  background: #e2e2e2;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.mytabs .tab {
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+  order: 1;
+  display: none;
+}
+
+.mytabs .tab.first {
+  padding-left: 20px;
+}
+
+.mytabs .tab h2 {
+  font-size: 3em;
+}
+
+.mytabs input[type='radio']:checked+label {
+  background: #fff;
+  border: 1px solid black;
+  border-bottom: 1px solid white;
+  position: relative;
+  z-index: 2;
+}
+
+.mytabs input[type='radio']:checked+label+.tab {
+  display: block;
+  border: 1px solid black;
+  position: relative;
+  z-index: 1;
+  margin-top: -2.1px;
+  border-radius: 0px 5px 5px 5px;
+}
+
+.heading {
+  font-size: 6rem;
+  font-weight: 100;
+  font-style: normal;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  font-weight: 450;
+  font-style: normal;
+  width: 100%;
+  margin-bottom: 50px;
+  padding-left: 580px;
+}
+
+.tab h2 {
+  margin-bottom: 10px;
+}
+
+.mytabs label:hover {
+  border: 1px solid rgb(169, 169, 169);
+  border-bottom: 1px solid white;
+  transition: all 0.2s;
+}
+
+.alert.alert-success,
+.alert.alert-danger,
+.alert.alert-warning.first {
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.alert.alert-warning {
+  margin: auto;
+  margin-left: 8px;
+  margin-bottom: 10px;
+  width: 900px;
+}
+
+.tools-board label {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+.tools-board label:hover {
+  border: none;
+}
+
+.drawing-board {
+  border: 1px solid black;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background: black;
+}
+
+.options li {
+  margin-top: 10px;
+}
+
+.row #colors {
+  margin-top: 10px;
+}
+
+.alert.alert-danger svg {
+  margin-right: 5px;
+}
+
+.tools-board {
+  position: fixed;
+  left: 50%;
+  top: 633px;
+  transform: translate(-340%, -50%);
+  /* -50% moves the element to the left */
+  z-index: 1;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.row {
+  padding-top: 13px;
+}
+
+@media (max-width: 1450px) {
+  .tools-board {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    z-index: auto;
+    background-color: inherit;
+    border: none;
+    border-radius: inherit;
+  }
+
+  .mytabs .tab.first {
+    padding-left: 0px;
+  }
+}
