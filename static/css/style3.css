@@ -1,0 +1,19 @@
+@media (max-width:996px) {
+    .container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.drawing-board {
+    height: 476px;
+}
+
+.alignment{
+    text-align: left;
+}
+
+.mytabs {
+    margin-top: 0;
+    margin-bottom: 0;
+}
