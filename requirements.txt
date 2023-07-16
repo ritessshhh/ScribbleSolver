@@ -5,7 +5,7 @@ Pillow
 requires.io
 numpy
 sympy
-opencv-python
+opencv-python-headless
 sympy
 regex
 tensorflow
