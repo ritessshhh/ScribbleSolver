@@ -13,6 +13,8 @@ alert_message = ''
 
 @app.route('/')
 def index():
+    global alert_message
+    alert_message = ''
     return render_template("index.html", alert=alert_message)
 
 @app.route('/save_image', methods=['POST'])
