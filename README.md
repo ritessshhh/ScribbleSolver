@@ -7,12 +7,17 @@ The ScribbleSolver is a web based machine learning model that combines Convoluti
 Our model is highly accurate with a measured accuracy of 98.27%, and a minimized loss function of 0.656%. This showcases the successful application of machine learning techniques to solve complex, real-world problems.
 
 ## Dependencies
-Python (>=3.7) <br>
-TensorFlow (>=2.4.0) <br>
-Keras (>=2.3.0) <br>
-OpenCV (>=4.1.0) <br>
-Numpy (>=1.19.5) <br>
-Matplotlib (>=3.3.2) <br>
+Flask==2.1.1<br>
+gunicorn==20.1.0<br>
+pybase64<br>
+Pillow<br>
+requires.io<br>
+numpy<br>
+sympy<br>
+opencv-python-headless<br>
+regex<br>
+tensorflow<br>
+keras<br>
 
 ## Keep in mind:
 Scribble:<br>
