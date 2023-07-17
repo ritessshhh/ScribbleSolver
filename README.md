@@ -14,6 +14,51 @@ OpenCV (>=4.1.0) <br>
 Numpy (>=1.19.5) <br>
 Matplotlib (>=3.3.2) <br>
 
+## Keep in mind:
+Scribble:<br>
+1. Scribble any one variable equation on the drawing board.<br>
+2. Note: The model is trained only on "x", so make sure to use "x" only. It can be trained on more variables but to improve efficiency and simplicity we used x.<br>
+3. Make sure there is space between each number so that it recognises easily.<br>
+4. Equations should be in the format of "ax²+bx+c=0". Make sure to include "=0" or "=anything" at the end. <br>
+5. Cannot handle negative power.<br>
+6. Press the solve equation button and wait for few seconds for the roots.<br>
+<br>
+Enter: <br>
+1. Enter the equation in the input field.<br>
+2. Equations should be in the format of "ax^2 + bx + c = 0". Make sure to include "=0" or "=anything" at the end. <br>
+3. Can handle negative power.<br>
+4. Press the solve equation button and wait for few seconds for the roots.<br>
+
+# How to use?
+## Scribble:
+1. Scribble eqution on the drawing pad.
+<img width="1512" alt="Screenshot 2023-07-17 at 5 29 43 AM" src="https://github.com/ritessshhh/ScribbleSolver/assets/81812754/e9f33421-0d25-42b4-a384-152031b64ab0">
+
+
+2. Press solve equation button to solve.
+<img width="1512" alt="Screenshot 2023-07-17 at 5 30 00 AM" src="https://github.com/ritessshhh/ScribbleSolver/assets/81812754/7d1426b6-76e8-4c5b-b846-7a79da31a713">
+
+# Enter:
+1. Enter an equation in the input field.
+<img width="1512" alt="Screenshot 2023-07-17 at 5 31 00 AM" src="https://github.com/ritessshhh/ScribbleSolver/assets/81812754/ca606a5f-d01e-428a-b009-755cf9c18764">
+
+
+2. Press solve equation button to solve.
+<img width="1512" alt="Screenshot 2023-07-17 at 5 31 17 AM" src="https://github.com/ritessshhh/ScribbleSolver/assets/81812754/9ae7c042-86b4-4a08-89ac-8b0c5c515c74">
+
+# Error:
+1. Any wrong input or invalid equations are rejected.<br>
+   a. Scribble:
+   <img width="1512" alt="Screenshot 2023-07-17 at 5 31 35 AM" src="https://github.com/ritessshhh/ScribbleSolver/assets/81812754/3f224cab-29db-40fa-9bf7-d11dacacf3d3">
+   b. Enter:
+   <img width="1512" alt="Screenshot 2023-07-17 at 5 31 50 AM" src="https://github.com/ritessshhh/ScribbleSolver/assets/81812754/692e9bb2-04a0-40ff-87d3-082db3bb7e74">
+
+
+   
+
+
+
+
 ## Installation
 Clone the repo
 ```bash
