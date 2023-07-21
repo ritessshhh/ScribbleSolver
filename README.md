@@ -35,6 +35,11 @@ Enter: <br>
 2. Equations should be in the format of "ax^2 + bx + c = 0". Make sure to include "=0" or "=anything" at the end. <br>
 3. Can handle negative power.<br>
 4. Press the solve equation button and wait for few seconds for the roots.<br>
+<br>
+<img width="1512" alt="Screenshot 2023-07-17 at 5 29 43 AM" src="https://github.com/ritessshhh/ScribbleSolver/assets/81812754/1d3650af-ff15-4a98-88e1-3d9199a8d87c">
+The digits are not recognisable when they overlap each other's space.<br>
+<img width="1512" alt="Screenshot 2023-07-17 at 5 29 43 AM" src="https://github.com/ritessshhh/ScribbleSolver/assets/81812754/39d66a52-468d-493c-bacd-71e30dd49154">
+The digits are recognisable when they are in their own space.<br>
 
 # How to use?
 ## Scribble:
