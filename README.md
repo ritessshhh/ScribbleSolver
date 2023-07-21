@@ -22,24 +22,30 @@ keras
 ```
 
 ## Keep in mind:
-Scribble:<br>
+A. Scribble:<br>
+<pre>
 1. Scribble any one variable equation on the drawing board.<br>
 2. Note: The model is trained only on "x", so make sure to use "x" only. It can be trained on more variables but to improve efficiency and simplicity we used x.<br>
 3. Make sure there is space between each number so that it recognises easily.<br>
 4. Equations should be in the format of "ax²+bx+c=0". Make sure to include "=0" or "=anything" at the end. <br>
 5. Cannot handle negative power.<br>
-6. Press the solve equation button and wait for few seconds for the roots.<br>
-<br>
-Enter: <br>
-1. Enter the equation in the input field.<br>
-2. Equations should be in the format of "ax^2 + bx + c = 0". Make sure to include "=0" or "=anything" at the end. <br>
-3. Can handle negative power.<br>
-4. Press the solve equation button and wait for few seconds for the roots.<br>
+6. Press the solve equation button and wait for few seconds for the roots.
+</pre>
+B. Enter:<br>
+<pre>
+ 1. Enter the equation in the input field.<br>
+ 2. Equations should be in the format of "ax^2 + bx + c = 0". Make sure to include "=0" or "=anything" at the end. <br>
+ 3. Can handle negative power.<br>
+ 4. Press the solve equation button and wait for few seconds for the roots.
+</pre>
+C. The digits are not recognisable when they overlap each other's space.<br>
 <br>
 <img width="1512" alt="Screenshot 2023-07-17 at 5 29 43 AM" src="https://github.com/ritessshhh/ScribbleSolver/assets/81812754/1d3650af-ff15-4a98-88e1-3d9199a8d87c">
-The digits are not recognisable when they overlap each other's space.<br>
+<br>
+D. The digits are recognisable when they are in their own space.<br>
+<br>
 <img width="1512" alt="Screenshot 2023-07-17 at 5 29 43 AM" src="https://github.com/ritessshhh/ScribbleSolver/assets/81812754/39d66a52-468d-493c-bacd-71e30dd49154">
-The digits are recognisable when they are in their own space.<br>
+
 
 # How to use?
 ## Scribble:
